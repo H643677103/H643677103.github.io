@@ -4320,8 +4320,8 @@ body[data-type='about'] #web_bg {
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background: var(--anzhiyu-card-bg);
-  color: var(--font-color);
+  background: var(--anzhiyu-white-op);
+  color: var(--anzhiyu-white);
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
