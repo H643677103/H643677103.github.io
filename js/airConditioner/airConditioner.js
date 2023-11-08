@@ -15,10 +15,10 @@ const speedButton = document.querySelector('.fan_speed-button_icon');
 const airSpeedImage = document.querySelector(".air_speed");
 const speedBox = document.getElementById('speed_box');
 const feng = document.querySelector(".feng");
-const winds = document.querySelector(".winds");
 const speedHigh = document.querySelector('.speed_hig');
 const speedMid = document.querySelector('.speed_mid');
 const speedLow = document.querySelector('.speed_low');
+const spanElements = wind.querySelectorAll('span');
 
 let powerOn = false;
 let speedOn = false;
@@ -79,6 +79,7 @@ function togglePower() {
       font.innerHTML = temperature + "°C";
       num.innerHTML = temperature;
       ding.play();
+      music.load();
       playAudio();
     }
   } else {
@@ -198,6 +199,7 @@ function updateButtons() {
 
   modeButton.style.mask = modes[currentModeIndex].icon;
   modeButton.style.webkitMask = modes[currentModeIndex].icon;
+  modeButton.style.color = modes[currentModeIndex].color;
   document.getElementById('mod_button').disabled = !powerOn;
   feng.style.background = modes[currentModeIndex].color;
 
@@ -207,13 +209,15 @@ function updateButtons() {
     document.getElementById('temperatureNum').textContent = '- -';
     feng.style.height = '0';
   } else {
+    modeButton.style.color = modes[currentModeIndex].color;
     speedButton.style.color = "#4CEEE2";
     setTimeout(function () { feng.style.height = '30px' }, 1000)
   }
 
-  winds.forEach(function (winds) {
-    winds.style.background = modes[currentModeIndex].color;
+  spanElements.forEach(function(span) {
+    span.style.background = modes[currentModeIndex].color;
   });
+
 
   if (currentFanSpeedIndex === 0 || currentFanSpeedIndex === 3) {
     speedMid.style.opacity = 0;

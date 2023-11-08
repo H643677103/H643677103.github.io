@@ -5714,6 +5714,23 @@ body[data-type='about'] #web_bg {
     width: 500px;
   }
 }
+.airLabel {
+  position: relative;
+  display: block;
+  width: 90%;
+  height: 80px;
+  top: 150px;
+  margin: 0 auto;
+  padding-left: 30px;
+  border-left: 3px solid #425aef;
+  background-color: var(--blockquote-bg);
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  color: #6a737d;
+}
+.airLabel h2 {
+  line-height: 25px;
+}
 @font-face {
   font-family: 'led regular';
   src: url("/img/airConditioner/DS-DIGI.TTF");
@@ -5760,7 +5777,7 @@ body[data-type='about'] #web_bg {
 .air-conditioner-tip .air-conditioner-tip-highlight {
   color: #63a5ef;
 }
-.container {
+.air-container {
   position: relative;
   height: 1000px;
   display: block;
