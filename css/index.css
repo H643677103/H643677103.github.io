@@ -4376,7 +4376,7 @@ body[data-type='about'] #web_bg {
 }
 .author-content-item.myphoto {
   height: 60%;
-  min-height: 240px;
+  min-height: 201px;
   position: relative;
   overflow: hidden;
   width: 39%;
@@ -4977,6 +4977,7 @@ body[data-type='about'] #web_bg {
     margin-right: 0;
     font-size: 1.5rem;
     background: #fff;
+    color: var(--anzhiyu-black) !important;
     border-radius: 50%;
     padding: 6px;
     margin-left: 80px;
@@ -11146,8 +11147,6 @@ h1.page-title + .tag-cloud-list {
   -ms-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
-  -webkit-box-shadow: var(--anzhiyu-shadow-black);
-  box-shadow: var(--anzhiyu-shadow-black);
 }
 .banner-button.secondary {
   background: var(--anzhiyu-secondbg);
