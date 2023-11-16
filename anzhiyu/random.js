@@ -1,1 +1,1 @@
-var posts=["2023/11/01/Markdown语法01/","2023/11/01/Markdown介绍/","2023/11/01/anzhiyu主题标签/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
+var posts=["2023/11/01/Markdown语法01/","2023/11/01/anzhiyu主题标签/","2023/11/01/Markdown介绍/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
