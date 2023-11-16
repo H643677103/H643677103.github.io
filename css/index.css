@@ -4932,11 +4932,6 @@ body[data-type='about'] #web_bg {
     width: 100% !important;
     margin-top: 1rem;
     padding: 1rem;
-    -webkit-animation: gradient 15s ease infinite;
-    -moz-animation: gradient 15s ease infinite;
-    -o-animation: gradient 15s ease infinite;
-    -ms-animation: gradient 15s ease infinite;
-    animation: gradient 15s ease infinite;
   }
   .author-content-item.map {
     margin-bottom: 0;
@@ -10797,6 +10792,11 @@ h1.page-title + .tag-cloud-list {
   left: 0;
   top: 0;
   content: '';
+  -webkit-animation: gradient 15s ease infinite;
+  -moz-animation: gradient 15s ease infinite;
+  -o-animation: gradient 15s ease infinite;
+  -ms-animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
 }
 #aside-content .card-info:hover .author-info-avatar {
   opacity: 0;
@@ -28800,7 +28800,12 @@ div#runtime {
   margin-top: 0;
   background-image: linear-gradient(-45deg, var(--anzhiyu-main), #0f4667, #2a6973 150%, #67044d);
   background-size: 400%;
-  animation: gradient 15s ease infinite;
+}
+
+@media screen and (max-width: 768px) {
+  .author-content.author-content-item {
+    animation: gradient 15s ease infinite;
+  }
 }
 
 #skills-tags-group-all {
