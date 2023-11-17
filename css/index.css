@@ -4376,7 +4376,7 @@ body[data-type='about'] #web_bg {
 }
 .author-content-item.myphoto {
   height: 60%;
-  min-height: 201px;
+  min-height: 240px;
   position: relative;
   overflow: hidden;
   width: 39%;
