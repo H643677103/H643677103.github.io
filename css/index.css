@@ -15331,8 +15331,18 @@ blockquote {
     -webkit-line-clamp: 2;
   }
 }
+#post .post-copyright .post-copyright__notice .post-copyright-info a {
+  padding: 0 4px;
+  border-radius: 4px;
+}
 #post .post-copyright .post-copyright__notice .post-copyright-info a:hover {
-  color: var(--anzhiyu-main);
+  color: var(--anzhiyu-wihite-font);
+  background-color: var(--anzhiyu-main);
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 #post .post-outdate-notice {
   position: relative;
