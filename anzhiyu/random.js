@@ -1,1 +1,1 @@
-var posts=["2023/11/01/Markdown介绍/","2023/11/01/Markdown语法01/","2023/11/24/我的世界模组推荐/","2023/11/01/外挂标签样式/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
+var posts=["posts/81dca98f.html","posts/db88f376.html","posts/75882a6b.html","posts/d50a.html"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
