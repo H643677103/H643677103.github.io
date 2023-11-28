@@ -66,7 +66,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2023-11-25 00:43:40',
+  postUpdate: '2023-11-29 01:49:22',
   postMainColor: '',
 }</script><noscript><style type="text/css">
   #nav {
@@ -361,10 +361,10 @@ queueMicrotask(() => {
     if (!footer) return
     let currentTimeHtml = "";
     if (nowHour < 18 && nowHour >= 9) {
-      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      // 如果是上班时间，默认就是"CHYT-上班摸鱼中.svg"图片，不需要更改
       currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
     } else {
-      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      // 如果是下班时间，插入"CHYT-下班啦.svg"图片
       let img = document.querySelector("#workboard .workSituationImg");
       img.src = "https://image.chyt.top/CHYT.-下班啦.svg";
       img.title = "下班了就该开开心心的玩耍，嘿嘿~";

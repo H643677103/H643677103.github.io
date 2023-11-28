@@ -17702,6 +17702,78 @@ div.btns.rounded a > img:first-child,
 div.btns.rounded a > i:first-child {
   border-radius: 16px;
 }
+.bubble-content {
+  display: inline-block;
+  color: var(--anzhiyu-main);
+  font-weight: bold;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  text-shadow: var(--anzhiyu-theme-op);
+  line-height: 1.7;
+  padding: 0px 8px;
+  border-radius: 6px;
+  background: transparent;
+}
+.bubble-content:hover {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: var(--anzhiyu-wihite-font);
+  background: var(--btn-hover-color);
+}
+.bubble-content:hover + .bubble-notation .bubble-item {
+  -webkit-transform: translate(-40px, 10px) rotateX(0deg);
+  -moz-transform: translate(-40px, 10px) rotateX(0deg);
+  -o-transform: translate(-40px, 10px) rotateX(0deg);
+  -ms-transform: translate(-40px, 10px) rotateX(0deg);
+  transform: translate(-40px, 10px) rotateX(0deg);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+.bubble-notation {
+  display: inline-block;
+}
+.bubble-item {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  color: #fff;
+  z-index: 9999;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  position: absolute;
+  -webkit-transform: translate(-40px, 10px) rotateX(90deg);
+  -moz-transform: translate(-40px, 10px) rotateX(90deg);
+  -o-transform: translate(-40px, 10px) rotateX(90deg);
+  -ms-transform: translate(-40px, 10px) rotateX(90deg);
+  transform: translate(-40px, 10px) rotateX(90deg);
+  width: auto;
+  height: auto;
+  max-width: 400px;
+  overflow: hidden;
+  padding: 20px 10px 10px 10px;
+  clip-path: polygon(5px 10px, 20px 10px, 30px 0, 40px 10px, calc(100% - 5px) 10px, 100% 15px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 15px, 5px 10px);
+}
 #article-container .btn-center {
   margin: 0 0 20px;
   text-align: center;
@@ -18554,6 +18626,22 @@ p .img-alt {
   display: inline-block;
   width: 100%;
 }
+.img-wrap {
+  position: relative;
+  padding-bottom: 20px;
+}
+.img-wrap span.image-caption {
+  position: absolute;
+  color: #666;
+  font-size: 12px;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
 s,
 del {
   color: #8e8e8e;
@@ -19370,6 +19458,150 @@ div.videos[col='4'] iframe {
 .note.danger:not(.no-icon):not(.modern)::before {
   color: #d9534f;
 }
+@media (min-width: 1200px) {
+  .poem {
+    margin: 0 auto;
+    height: auto;
+    writing-mode: vertical-rl;
+    writing-mode: tb-rl;
+  }
+  .poem p {
+    text-decoration: underline;
+    text-decoration-color: rgba(193,11,11,0.72);
+    text-decoration-style: dashed;
+  }
+}
+@font-face {
+  font-family: 'Poem';
+  src: url("https://unpkg.zhimg.com/akilar-candyassets/fonts/Poem.ttf");
+  font-display: swap;
+}
+.poem p {
+  font-family: 'Poem', 'KaiTi', sans-serif !important;
+  font-size: 25px;
+  text-align: center;
+}
+.poem-title {
+  font-family: 'Poem', 'KaiTi', sans-serif !important;
+  font-size: 2.5em;
+  text-align: center;
+}
+.poem-author {
+  text-align: center !important;
+  font-family: 'Poem', 'KaiTi', sans-serif !important;
+  font-size: 16px;
+  color: #424242;
+}
+.progress {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  font-size: var(--global-font-size);
+  background-color: rgba(88,88,88,0.6);
+  border-radius: 0.25rem;
+  margin: 1rem 0;
+  height: 2rem;
+  overflow: hidden;
+}
+.progress p {
+  margin: 0 0 0 10px !important;
+}
+.progress .progress-bar-animated {
+  background-color: #a7b5fd !important;
+  -webkit-animation: progress-bar-stripes 1s linear infinite;
+  -moz-animation: progress-bar-stripes 1s linear infinite;
+  -o-animation: progress-bar-stripes 1s linear infinite;
+  -ms-animation: progress-bar-stripes 1s linear infinite;
+  animation: progress-bar-stripes 1s linear infinite;
+}
+.progress .progress-bar-striped {
+  background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem;
+}
+.progress .progress-bar {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  overflow: visible;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #0d6efd;
+  -webkit-transition: width 0.6s ease;
+  -moz-transition: width 0.6s ease;
+  -o-transition: width 0.6s ease;
+  -ms-transition: width 0.6s ease;
+  transition: width 0.6s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .progress .progress-bar {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    -ms-transition: none;
+    transition: none;
+  }
+}
+.progress .bg-green {
+  background-color: #28a745 !important;
+}
+.progress .bg-yellow {
+  background-color: #ffc107 !important;
+}
+.progress .bg-red {
+  background-color: #dc3545 !important;
+}
+.progress .bg-cyan {
+  background-color: #17a2b8 !important;
+}
+.progress .bg-blue {
+  background-color: #0d6efd !important;
+}
+.progress .bg-gray {
+  background-color: #7f838a !important;
+}
+@-moz-keyframes progress-bar-stripes {
+  0% {
+    background-position-x: 1rem;
+  }
+}
+@-webkit-keyframes progress-bar-stripes {
+  0% {
+    background-position-x: 1rem;
+  }
+}
+@-o-keyframes progress-bar-stripes {
+  0% {
+    background-position-x: 1rem;
+  }
+}
+@keyframes progress-bar-stripes {
+  0% {
+    background-position-x: 1rem;
+  }
+}
 .site-card-group {
   display: -webkit-box;
   display: -moz-box;
@@ -19633,7 +19865,6 @@ p.p.gray {
   border: 3px solid var(--anzhiyu-secondbg);
   margin: 1rem 0 !important;
   border-radius: 12px;
-  overflow: hidden;
   -webkit-box-shadow: var(--anzhiyu-shadow-border);
   box-shadow: var(--anzhiyu-shadow-border);
   background: var(--anzhiyu-card-bg);
