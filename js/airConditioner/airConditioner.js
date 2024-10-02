@@ -1,0 +1,254 @@
+let pattern = document.querySelector(".pattern");
+let font = document.querySelector(".font");
+let num = document.getElementById('temperatureNum');
+let dot = document.querySelector(".dot");
+let wind = document.querySelector(".wind");
+let music = document.querySelector(".music");
+let ding = document.querySelector(".ding");
+let openButton = document.querySelector(".open_icon");
+let tempUpButton = document.getElementById('temp-up-button');
+let tempDownButton = document.getElementById('temp-down-button');
+let patternText = document.getElementById('remote_pattern');
+let circleRing2 = document.getElementById('circle-ring_2');
+let modeButton = document.querySelector('.mod_button_icon');
+let speedButton = document.querySelector('.fan_speed-button_icon');
+let airSpeedImage = document.querySelector(".air_speed");
+let speedBox = document.getElementById('speed_box');
+let feng = document.querySelector(".feng");
+let speedHigh = document.querySelector('.speed_hig');
+let speedMid = document.querySelector('.speed_mid');
+let speedLow = document.querySelector('.speed_low');
+let spanElements = wind.querySelectorAll('span');
+
+let powerOn = false;
+let speedOn = false;
+let canClick = true;
+let temperature = 24;
+
+let currentModeIndex = 0;
+let currentFanSpeedIndex = 0;
+let currentTempRingIndex = 0;
+
+let modes = [
+  { name: '制冷', color: '#2EA6FF', initialTemperature: 20, iconpath: '/img/airConditioner/refrigeration.svg', icon: `url("data:image/svg+xml;utf8,<svg viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'><path fill='currentColor' d='M839.8208 660.7232l-52.6336-29.7472 45.4016-25.664c16.0768-9.088 21.568-29.1328 12.3136-44.8512-9.28-15.744-29.824-21.1584-45.9008-12.0064l-78.976 44.608-142.3104-80.384 144.3072-81.4976 77.0176 43.52c5.2992 2.9312 11.0592 4.3136 16.768 4.3136 11.6096 0 22.912-5.8496 29.12-16.32a32.5632 32.5632 0 0 0-12.2752-44.928l-43.4688-24.4992 49.4592-27.904a32.4736 32.4736 0 0 0 12.2752-44.928c-9.3184-15.744-29.8496-21.0944-45.8752-12.0832l-49.408 27.9808-0.0384-48.9984c0-18.176-15.0144-32.8576-33.5744-32.8576h-0.0384c-18.5472 0-33.5616 14.7584-33.5616 32.8576v86.912L546.112 454.656V293.9136l77.0304-43.4688c16-9.0624 21.5296-29.12 12.288-44.8512-9.3056-15.7184-29.824-21.1456-45.8752-12.0064l-43.4432 24.4992v-57.2288c0-18.1632-15.04-32.8576-33.5872-32.8576-18.5728 0-33.5872 14.6944-33.5872 32.8576v57.1776l-43.3408-24.448c-16.1792-9.1392-36.608-3.712-45.9008 12.0064-9.28 15.744-3.776 35.7888 12.3136 44.8512l76.928 43.4688v162.9824l-142.272-80.3328v-89.216c0-18.176-15.0912-32.8704-33.5872-32.8704-18.56 0-33.6 14.6816-33.6 32.8576v51.2512L217.984 309.504c-16.1408-9.088-36.608-3.648-45.9008 12.0704-9.2544 15.7312-3.776 35.7888 12.3136 44.864l49.472 27.9808-41.344 23.3344a32.384 32.384 0 0 0-12.3136 44.864 33.664 33.664 0 0 0 29.1456 16.384c5.6576 0 11.456-1.3824 16.7552-4.3904l74.9312-42.2912 142.2848 80.3328-140.2496 79.232-77.0048-43.4432c-16.128-9.152-36.672-3.7248-45.888 12.0064-9.2928 15.7184-3.776 35.7632 12.3136 44.8512l43.392 24.4992-52.6848 29.7472a32.512 32.512 0 0 0-12.3136 44.928 33.7152 33.7152 0 0 0 29.1456 16.384c5.696 0 11.4816-1.408 16.768-4.3136l52.672-29.7984v48.9856c0 18.176 15.0272 32.8576 33.6 32.8576 18.496 0 33.5872-14.6816 33.5872-32.8576v-86.9632l142.272-80.3328v160.7168l-76.9664 43.4688a32.4736 32.4736 0 0 0-12.288 44.9152 33.6384 33.6384 0 0 0 29.1072 16.4096c5.7088 0 11.4688-1.408 16.768-4.3904l43.392-24.512v58.0864c0 18.1632 14.9888 32.8576 33.5616 32.8576 18.56 0 33.6-14.6944 33.6-32.8576v-58.0864l43.4048 24.512c16.0512 9.0112 36.5824 3.6352 45.9008-12.032a32.5376 32.5376 0 0 0-12.3136-44.9024l-76.992-43.52V570.688l142.3104 80.384 0.0256 84.6592c0 18.176 15.0528 32.8576 33.5872 32.8576h0.0384c18.5344 0 33.5488-14.6816 33.5488-32.8576v-46.72l50.6112 28.5696c5.2736 2.9824 11.0464 4.3904 16.7296 4.3904 11.6224 0 22.9248-5.9136 29.1584-16.384 9.2544-15.744 3.776-35.7888-12.3008-44.8768z'></path></svg>") no-repeat` },
+  { name: '制热', color: '#FF9750', initialTemperature: 26, iconpath: '/img/airConditioner/heating.svg', icon: `url("data:image/svg+xml;utf8,<svg viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'><path fill='currentColor' d='M511.25 337.9c-96.11 0-174.3 78.19-174.3 174.3 0 96.11 78.19 174.3 174.3 174.3 96.11 0 174.3-78.19 174.3-174.3 0-96.11-78.19-174.3-174.3-174.3z m0 263.26c-49.06 0-88.96-39.91-88.96-88.96 0-49.06 39.91-88.96 88.96-88.96s88.96 39.91 88.96 88.96c0.01 49.05-39.9 88.96-88.96 88.96zM469.4 85.33h85.33v162.12H469.4zM469.27 776.55h85.33v162.12h-85.33zM668.93 294.82l114.635-114.635 60.344 60.344-114.635 114.635zM180.085 783.48L294.72 668.843l60.344 60.344-114.636 114.635zM668.836 729.274l60.344-60.344 114.635 114.635-60.344 60.344zM180.178 240.429l60.344-60.344L355.157 294.72l-60.344 60.344zM776.55 469.4h162.12v85.33H776.55zM85.33 469.27h162.12v85.33H85.33z'></path></svg>") no-repeat` },
+  { name: '通风', color: '#00EDC1', initialTemperature: 22, iconpath: '/img/airConditioner/ventilate.svg', icon: `url("data:image/svg+xml;utf8,<svg viewBox='0 0 1365 1024' xmlns='http://www.w3.org/2000/svg'><path d='M389.678973 323.729322c95.310513 0 201.88086-30.822373 310.498449-119.536216 322.440697-263.070664 573.569113 33.893237 584.032797 46.631636a44.584393 44.584393 0 0 0 64.488139 5.345577 48.906349 48.906349 0 0 0 5.231842-67.10406c-3.070864-3.753278-318.005005-379.877223-710.165683-59.71124C353.738493 366.039001 88.734323 108.200179 77.360753 97.054081a44.470657 44.470657 0 0 0-64.488139 1.251093 48.906349 48.906349 0 0 0 1.137357 67.217796c2.274714 2.274714 160.936009 158.092617 375.669002 158.092617z m254.085544 117.147767C353.738493 677.561071 88.734323 419.722249 77.360753 408.576151a44.470657 44.470657 0 0 0-64.488139 1.137357 48.906349 48.906349 0 0 0 1.137357 67.445268c2.274714 2.274714 160.936009 158.092617 375.669002 158.092617 95.424249 0 201.88086-30.822373 310.498449-119.536217 322.440697-263.070664 573.569113 33.893237 584.032797 46.631636a44.584393 44.584393 0 0 0 64.488139 5.345577 48.906349 48.906349 0 0 0 5.231842-67.10406c-3.070864-3.753278-318.005005-379.877223-710.165683-59.71124z m0 311.52207C353.738493 989.083141 88.734323 731.130584 77.360753 720.098221a44.584393 44.584393 0 0 0-64.488139 1.137357 48.906349 48.906349 0 0 0 1.137357 67.331532c2.274714 2.274714 160.936009 158.092617 375.669002 158.092617 95.424249 0 201.88086-30.708638 310.498449-119.42248 322.440697-263.070664 573.569113 33.779502 584.032797 46.517899a44.470657 44.470657 0 0 0 64.488139 5.459314 48.906349 48.906349 0 0 0 5.231842-67.104061c-3.070864-3.753278-318.005005-379.877223-710.165683-59.71124z'></path></svg>") no-repeat` },
+  { name: '除湿', color: '#59C4FF', initialTemperature: 24, iconpath: '/img/airConditioner/dehumidification.svg', icon: `url("data:image/svg+xml;utf8,<svg viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg'><path d='M796.3 645l0.2-0.2c-0.3-4.1-1-8.4-2-12.9-0.4-2.8-0.9-5.7-1.3-8.5-0.1 0.2-0.3 0.4-0.4 0.7-5.9-22.9-16.3-45.1-16.3-45.1L539.9 91.5c-35.5-61.4-66.7 0-66.7 0L240.9 587.8c-9.7 26.4-12 47.2-12 47.2-1.7 12.8-2.7 25.7-2.7 39 0.1 157.8 128 285.7 285.9 285.7s285.7-128 285.7-285.7c0-9.8-0.5-19.4-1.5-29m-284.2 6.6c-85.5-77.2-167.1-71.4-224.3-49.1l223-465.9 215.4 456.3c17.8 41.9 20.2 68.8 20.2 80.3-55.3 42.1-140.3 63.2-234.3-21.6m0 0'></path></svg>") no-repeat` },
+
+];
+
+let fanSpeeds = [
+  { speed: '风速 低', speedpath: '/img/airConditioner/speed_1.png' },
+  { speed: '风速 中', speedpath: '/img/airConditioner/speed_2.png' },
+  { speed: '风速 高', speedpath: '/img/airConditioner/speed_3.png' },
+  { speed: '风速 自动', speedpath: '/img/airConditioner/speed_a.png' }
+];
+
+let tempRing = [
+  '0 0 15px 7px #AAD9FE,0 0 15px 7px #AAD9FE inset',
+  '0 0 15px 7px #FFC3BE,0 0 15px 7px #FFC3BE inset',
+  '0 0 15px 7px #A1FDEC,0 0 15px 7px #A1FDEC inset',
+  '0 0 15px 7px #AAD9FE,0 0 15px 7px #AAD9FE inset'
+];
+
+// 开关
+function togglePower() {
+  if (canClick) {
+    powerOn = !powerOn;
+    updateButtons();
+    canClick = false;
+    setTimeout(function () {
+      canClick = true;
+    }, 2000);
+
+    if (!powerOn) {
+      pattern.style.opacity = 0;
+      airSpeedImage.style.opacity = 0;
+      dot.style.backgroundColor = 'rgb(112, 112, 112, 0.5)';
+      wind.style.opacity = 0;
+      font.innerHTML = '';
+      ding.play();
+      audioContext.close();
+
+    } else {
+      pattern.style.opacity = 1;
+      airSpeedImage.style.opacity = 1;
+      dot.style.backgroundColor = 'rgb(19, 221, 53)';
+      wind.style.opacity = 1;
+      // temperature = modes[currentModeIndex].initialTemperature;
+      font.innerHTML = temperature + "°C";
+      num.innerHTML = temperature;
+      ding.play();
+      playAudio();
+    }
+  } else {
+    // showWarningAlert('不可频繁点击~')
+    chyt.snackbarShow("不可频繁点击~");
+  }
+}
+
+let audioContext = new (window.AudioContext || window.webkitAudioContext)();
+function playAudio() {
+  if (audioContext.state === 'closed') {
+    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  }
+  fetch("/img/airConditioner/ac-work.m4a")
+    .then(response => response.arrayBuffer())
+    .then(data => audioContext.decodeAudioData(data))
+    .then(buffer => {
+      const source = audioContext.createBufferSource();
+      source.buffer = buffer;
+      source.loop = true;
+      source.connect(audioContext.destination);
+
+      // 循环的起始时间（秒）和结束时间（秒）
+      const loopStart = 6.67;
+      const loopEnd = 7.72;
+
+      source.loopStart = loopStart;
+      source.loopEnd = loopEnd;
+
+      source.onended = function() {
+        if (isPlaying) {
+          source.start(0, loopStart);
+        }
+      };
+
+      source.start(0, 0);
+    })
+    .catch(error => {
+      console.error("加载音频文件时出错:", error);
+    });
+}
+
+// 温度
+function increaseTemp() {
+  if (powerOn) {
+    if (temperature == 31) {
+      // showInfoAlert("已达到最大温度了~");
+      chyt.snackbarShow("已达到最大温度了~");
+      return;
+    }
+    temperature++;
+    updateButtons();
+    font.innerHTML = temperature + "°C";
+    num.innerHTML = temperature;
+    ding.play();
+  }
+}
+
+// 温度减
+function decreaseTemp() {
+  if (powerOn) {
+    if (temperature == 16) {
+      // showInfoAlert("已达到最小温度了~");
+      chyt.snackbarShow("已达到最小温度了~");
+      return;
+    }
+    temperature--;
+    updateButtons();
+    font.innerHTML = temperature + "°C";
+    num.innerHTML = temperature;
+    ding.play();
+  }
+}
+
+// 模式切换
+function changeMode() {
+  if (powerOn) {
+    currentModeIndex = (currentModeIndex + 1) % modes.length;
+    currentTempRingIndex = (currentTempRingIndex + 1) % tempRing.length;
+    font.innerHTML = temperature + "°C";
+    num.innerHTML = temperature;
+    tipIs();
+    ding.play();
+    updateButtons();
+  }
+}
+
+// 风速切换
+var speedTimer;// 用于存储计时器
+function changeFanSpeed() {
+  if (powerOn) {
+    currentFanSpeedIndex = (currentFanSpeedIndex + 1) % fanSpeeds.length;
+    updateButtons();
+    if (!speedOn) {
+      speedBox.style.display = 'flex';
+    }
+  };
+  clearTimeout(speedTimer);
+  speedTimer = setTimeout(function () {
+    speedBox.style.display = 'none';
+  }, 2000);
+  ding.play();
+  updateButtons();
+}
+
+function updateButtons() {
+  openButton.style.color = powerOn ? "#4CEEE2" : "#C9D6D8";
+  tempUpButton.disabled = !powerOn;
+  document.querySelector(".remote_up_icon").style.color = powerOn ? "#63949C" : "#C9D6D8";
+  tempDownButton.disabled = !powerOn;
+  document.querySelector(".remote_down_icon").style.color = powerOn ? "#63949C" : "#C9D6D8";
+
+
+  patternText.textContent = powerOn ? modes[currentModeIndex].name : '--';
+  airSpeedImage.src = fanSpeeds[currentFanSpeedIndex].speedpath;
+  circleRing2.style.boxShadow = powerOn ? tempRing[currentTempRingIndex] : '';
+  circleRing2.style.width = powerOn ? '100%' : '0';
+  circleRing2.style.height = powerOn ? '100%' : '0';
+  pattern.src = modes[currentModeIndex].iconpath;
+
+  modeButton.style.mask = modes[currentModeIndex].icon;
+  modeButton.style.webkitMask = modes[currentModeIndex].icon;
+  modeButton.style.color = modes[currentModeIndex].color;
+  document.getElementById('mod_button').disabled = !powerOn;
+  document.getElementById('fan-speed-button').disabled = !powerOn;
+  feng.style.background = modes[currentModeIndex].color;
+
+  if (!powerOn) {
+    modeButton.style.color = "#C9D6D8";
+    speedButton.style.color = "#C9D6D8";
+    document.getElementById('temperatureNum').textContent = '- -';
+    feng.style.height = '0';
+  } else {
+    modeButton.style.color = modes[currentModeIndex].color;
+    speedButton.style.color = "#4CEEE2";
+    setTimeout(function () { feng.style.height = '30px' }, 1000)
+  }
+
+  spanElements.forEach(function(span) {
+    span.style.background = modes[currentModeIndex].color;
+  });
+
+
+  if (currentFanSpeedIndex === 0 || currentFanSpeedIndex === 3) {
+    speedMid.style.opacity = 0;
+    speedLow.style.opacity = 1;
+  } else if (currentFanSpeedIndex === 1) {
+    speedMid.style.opacity = 1;
+    speedHigh.style.opacity = 0;
+  } else if (currentFanSpeedIndex === 2) {
+    speedMid.style.opacity = 1;
+    speedHigh.style.opacity = 1;
+  } else {
+    speedLow.style.opacity = 0;
+    speedMid.style.opacity = 0;
+    speedHigh.style.opacity = 0;
+  }
+
+  document.getElementById('fan-speed-button').disabled = !powerOn;
+  speedBox.textContent = fanSpeeds[currentFanSpeedIndex].speed;
+}
+
+updateButtons(); // 初始化按钮状态
+
+function tipIs() {
+  if (temperature < 26 && currentModeIndex == 0) {
+    // showInfoAlert("建议将空调的制冷温度调至 26 度以上，为节能减排贡献一份力量!");
+    chyt.snackbarShow("建议将空调的制冷温度调至 26 度以上，为节能减排贡献一份力量!");
+  } else if (temperature > 20 && currentModeIndex == 1) {
+    // showInfoAlert("建议将空调的制热温度调至 20 度以下，为节能减排贡献一份力量!");
+    chyt.snackbarShow("建议将空调的制热温度调至 20 度以下，为节能减排贡献一份力量!");
+  }
+}
