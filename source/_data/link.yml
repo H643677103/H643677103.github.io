@@ -1,0 +1,92 @@
+# - class_name: 框架
+#   flink_style: flexcard
+#   hundredSuffix: ""
+#   link_list:
+#     - name: Hexo
+#       link: https://hexo.io/zh-tw/
+#       avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
+#       descr: 快速、简单且强大的网站框架
+#     - name: CHYT主题
+#       link: https://blog.chyt.top/
+#       avatar: https://p.chyt.top//blogimg/202410021721536.png
+#       descr: 生活万物，唯爱小婷
+#       siteshot: https://image.chyt.top/siteshot.png
+
+- class_name: 推荐博客
+  flink_style: telescopic
+  hundredSuffix: ""
+  link_list:
+    - name: CHYT
+      link: https://blog.chyt.top/
+      avatar: https://p.chyt.top//blogimg/202410021721536.png!cover
+      descr: 生活万物，唯爱小婷
+      siteshot: https://image.chyt.top/siteshot.png
+      color: vip
+      tag: 生活
+    - name: 安知鱼
+      link: https://blog.anheyu.com/
+      avatar: https://p.chyt.top//cover/202410021733860.jpg!cover
+      descr: 生活明朗，万物可爱
+      siteshot: https://npm.elemecdn.com/anzhiyu-theme-static@1.1.6/img/blog.anheyu.com.jpg
+      color: vip
+      tag: 技术
+    - name: 张洪Heo
+      link: https://blog.zhheo.com/
+      avatar: https://p.chyt.top//cover/202410021734613.png!cover
+      descr: 分享设计与科技生活
+      siteshot: https://bu.dusays.com/2023/03/03/6401bcbf1d33b.webp
+      color: var(--chyt-green)
+      tag: 生活
+
+- class_name: 小伙伴
+  class_desc: 那些人，那些事
+  flink_style: CHYT
+  hundredSuffix: ""
+  link_list:
+    - name: Fomalhaut🥝
+      link: https://www.fomal.cc/
+      avatar: https://p.chyt.top//cover/202410021735049.webp!cover
+      descr: Future is now 🍭🍭🍭
+      recommend: true
+    - name: 杜老师说
+      link: https://dusays.com
+      avatar: https://p.chyt.top//cover/202410021735877.png!cover
+      descr: 师者，传道，授业，解惑！
+    - name: Akilarの糖果屋
+      link: https://akilar.top/
+      avatar: https://p.chyt.top//cover/202410021736566.jpeg!cover
+      descr: 欢迎光临糖果屋
+      recommend: true
+    - name: 风记星辰
+      link: https://www.thyuu.com
+      avatar: https://p.chyt.top//cover/202410021736837.webp!cover
+      descr: 热爱你来过的每度温暖
+    - name: CC康纳百川
+      link: https://blog.ccknbc.cc
+      avatar: https://p.chyt.top//cover/202410021736558.png!cover
+      descr: CC康纳百川的小窝
+    - name: 贰猹的小窝
+      link: https://noionion.top/
+      avatar: https://p.chyt.top//cover/202410021737527.jpeg!cover
+      descr: 用这生命中的每一秒，给自己一个不后悔的未来
+    - name: 小植同学
+      link: https://blog.xiaoztx.top
+      avatar: https://p.chyt.top//cover/202410021737996.jpeg!cover
+      siteshot: https://img.xiaoztx.top/image/2023/10/29/9d2fa78857f43f0250a0776fd6d02b6c.jpeg
+      descr: 锦鲤相随，好运常伴
+    - name: 青桔气球
+      link: https://blog.qjqq.cn/
+      avatar: https://p.chyt.top//cover/202410021737423.webp!cover
+      descr: 分享网络安全与科技生活
+    - name: 琅環书生
+      link: https://www.zhuangzhi.love
+      avatar: https://p.chyt.top//cover/202410021738351.jpeg!cover
+      descr: 无远弗届，皆有可能
+    - name: 煮雪话河山`Blog
+      link: https://blog.cent1pedee.top/
+      avatar: https://p.chyt.top//cover/202410021747252.jpg!cover
+      descr: 如月之恒，如日之升。
+    - name: Leet
+      link: https://skyline523.github.io/
+      avatar: https://p.chyt.top//cover/202410021746713.png!cover
+      descr: 我会找到办法的，我总有办法

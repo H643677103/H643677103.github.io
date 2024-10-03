@@ -1,0 +1,82 @@
+- const { translate } = theme
+#rightMenu
+	.rightMenu-group.rightMenu-small
+		.rightMenu-item#menu-backward
+			i.chytfont.chyt-icon-arrow-left
+		.rightMenu-item#menu-forward
+			i.chytfont.chyt-icon-arrow-right
+		.rightMenu-item#menu-refresh
+			i.chytfont.chyt-icon-arrow-rotate-right(style="font-size: 1rem;")
+		.rightMenu-item#menu-top
+			i.chytfont.chyt-icon-arrow-up
+	.rightMenu-group.rightMenu-line.rightMenuPlugin
+		.rightMenu-item#menu-copytext
+			i.chytfont.chyt-icon-copy
+			span 复制选中文本
+		.rightMenu-item#menu-pastetext
+			i.chytfont.chyt-icon-paste
+			span 粘贴文本
+		a.rightMenu-item#menu-commenttext
+			i.chytfont.chyt-icon-comment-medical
+			span 引用到评论
+		.rightMenu-item#menu-newwindow
+			i.chytfont.chyt-icon-window-restore
+			span 新窗口打开
+		.rightMenu-item#menu-copylink
+			i.chytfont.chyt-icon-link
+			span 复制链接地址
+		.rightMenu-item#menu-copyimg
+			i.chytfont.chyt-icon-images
+			span 复制此图片
+		.rightMenu-item#menu-downloadimg
+			i.chytfont.chyt-icon-download
+			span 下载此图片
+		.rightMenu-item#menu-newwindowimg
+			i.chytfont.chyt-icon-window-restore
+			span 新窗口打开图片
+		.rightMenu-item#menu-search
+			i.chytfont.chyt-icon-magnifying-glass
+			span 站内搜索
+		.rightMenu-item#menu-searchBaidu
+			i.chytfont.chyt-icon-magnifying-glass
+			span 百度搜索
+		.rightMenu-item#menu-music-toggle
+			i.chytfont.chyt-icon-play
+			span 播放音乐
+		.rightMenu-item#menu-music-back
+			i.chytfont.chyt-icon-backward
+			span 切换到上一首
+		.rightMenu-item#menu-music-forward
+			i.chytfont.chyt-icon-forward
+			span 切换到下一首
+		- const nav_music_all_playlist = theme.nav_music.all_playlist
+		.rightMenu-item#menu-music-playlist(onclick=`window.open("${nav_music_all_playlist}", "_blank");`, style='display: none;')
+			i.chytfont.chyt-icon-radio
+			span 查看所有歌曲
+		.rightMenu-item#menu-music-copyMusicName
+			i.chytfont.chyt-icon-copy
+			span 复制歌名
+	.rightMenu-group.rightMenu-line.rightMenuOther
+		a.rightMenu-item.menu-link#menu-randomPost
+			i.chytfont.chyt-icon-shuffle
+			span 随便逛逛
+		a.rightMenu-item.menu-link(href='/categories/')
+			i.chytfont.chyt-icon-cube
+			span 博客分类
+		a.rightMenu-item.menu-link(href='/tags/')
+			i.chytfont.chyt-icon-tags
+			span 文章标签
+	.rightMenu-group.rightMenu-line.rightMenuOther
+		a.rightMenu-item#menu-copy(href='javascript:void(0);')
+			i.chytfont.chyt-icon-copy
+			span 复制地址
+		a.rightMenu-item#menu-commentBarrage(href='javascript:void(0);')
+			i.chytfont.chyt-icon-message
+			span.menu-commentBarrage-text 关闭热评
+		a.rightMenu-item#menu-darkmode(href='javascript:void(0);')
+			i.chytfont.chyt-icon-circle-half-stroke
+			span.menu-darkmode-text 深色模式
+		a.rightMenu-item#menu-translate(href='javascript:void(0);')
+			i.chytfont.chyt-icon-language
+			span=translate.rightMenuMsgDefault
+#rightmenu-mask

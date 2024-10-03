@@ -1,0 +1,18 @@
+.author-content.author-content-item {
+  height: 19rem;
+  background-color: var(--chyt-main);
+  background-position: left 28%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--chyt-white);
+  overflow: hidden;
+  margin-top: 0;
+  background-image: linear-gradient(-45deg, var(--chyt-main), #0f4667, #2a6973 150%, #67044d);
+  background-size: 400%;
+}
+
+@media screen and (max-width: 768px) {
+  .author-content.author-content-item {
+    animation: gradient 15s ease infinite;
+  }
+}

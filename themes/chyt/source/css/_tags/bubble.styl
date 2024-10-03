@@ -1,0 +1,39 @@
+
+.bubble-content
+  display inline-block
+  color var(--chyt-main)
+  font-weight bold
+  transition: all 0.2s ease-in-out
+  text-shadow: var(--chyt-theme-op)
+  line-height: 1.7
+  padding: 0px 8px
+  border-radius: 6px
+  background: transparent
+  &:hover
+    transition: all 0.2s ease-in-out
+    color: var(--chyt-wihite-font)
+    background: var(--btn-hover-color)
+
+    & + .bubble-notation
+      .bubble-item
+        transform translate(-40px, 10px) rotateX(0deg)
+        transition: all 0.5s ease-in-out
+        opacity: 1
+
+.bubble-notation
+  display: inline-block
+
+.bubble-item
+  transition: all 0.5s ease-in-out
+  opacity 0
+  color white
+  z-index: 9999
+  display flex
+  position absolute
+  transform translate(-40px, 10px) rotateX(90deg)
+  width auto
+  height auto
+  max-width 400px
+  overflow hidden
+  padding 20px 10px 10px 10px
+  clip-path polygon(5px 10px,20px 10px,30px 0,40px 10px,calc(100% - 5px) 10px,100% 15px,100% calc(100% - 5px),calc(100% - 5px) 100%,5px 100%,0 calc(100% - 5px),0 15px,5px 10px)

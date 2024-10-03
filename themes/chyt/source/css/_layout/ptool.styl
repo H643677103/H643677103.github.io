@@ -1,0 +1,110 @@
+if hexo-config('ptool.enable') == true
+  .post-tools
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    -webkit-user-select: none;
+    flex-direction: column;
+    align-items: center;
+    .post-tools-left
+      white-space: nowrap;
+      display: flex;
+      text-overflow: ellipsis;
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+      justify-content: center;
+      .rewardLeftButton, .shareRight
+        display: flex
+        margin: 10px
+      +maxWidth768()
+        margin-top: 1rem;
+        justify-content: center;
+        width: 100%;
+        > div
+          margin: 8px;
+
+.post-tools-right
+  padding-right: 0px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  +maxWidth768()
+    flex-direction: column;
+.share-link
+  margin-left: 0.5rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  &.mobile:hover 
+    .share-button
+      background: var(--chyt-green);
+      border-color: var(--chyt-green);
+      box-shadow: var(--chyt-shadow-green);
+      color: var(--chyt-white);
+    .share-main
+      opacity: 1;
+      transform: translateY(0);
+
+
+  .share-qrcode
+    display: flex;
+    justify-content: center;
+  .share-button
+    background: var(--chyt-card-bg);
+    border: var(--style-border);
+    color: var(--chyt-fontcolor);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 56px;
+    height: 40px;
+    &:hover
+      background: var(--chyt-main);
+      border-color: var(--chyt-main);
+      color: var(--chyt-white);
+      transition: 0.3s;
+      box-shadow: var(--chyt-shadow-blue);
+
+    i
+      line-height: 38px;
+      font-size: 1.1rem;
+  .share-main
+    position: absolute;
+    bottom: 40px;
+    z-index: 100;
+    padding-bottom: 15px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    transform: translateY(8px);
+    .share-main-all
+      padding: 12px;
+      border-radius: 12px;
+      background: var(--chyt-background);
+      animation: donate_effcet 0.3s 0.1s ease both;
+      flex-direction: column;
+      border: var(--style-border-always);
+      #qrcode 
+        width: 150px;
+        height: 150px;
+        min-width: 150px;
+        min-height: 150px;
+        background: var(--chyt-white);
+        padding: 8px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        border: var(--style-border-always);
+      .reward-dec 
+        font-size: 0.6rem;
+
+if hexo-config('ptool.enable') == true && !hexo-config('ptool.mode')
+  .post-tools .post-tools-left > div
+    margin: 0
+  .post-tools .post-tools-left
+    width auto
+if hexo-config('ptool.enable') == true && hexo-config('ptool.categories')
+  #post .tag_share
+    margin-bottom: 2rem
+    flex-direction: column;

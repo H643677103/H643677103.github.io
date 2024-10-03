@@ -1,0 +1,50 @@
+- title: 即刻短文
+  subTitle: 小C的日常生活。
+  tips: 随时随地，分享生活
+  buttonText: 关于我
+  buttonLink: /about/
+  limit: 30
+  home_essay: true
+  top_background: https://image.chyt.top/essayImg.jpg
+  essay_list:
+
+    - content: 最近降温了，所以给博客安装上了小空调，提高一下博客温度，温暖一下大家。
+      date: 2023/11/09
+      image: 
+        - https://image.chyt.top/essay/airConditionerImage.png
+      link: /air-conditioner/
+
+    - content: 歌曲推荐
+      date: 2023/11/01
+      aplayer:
+        server: netease
+        id: 2075896544
+    
+    - content: 祝我室友又成功的老了一岁！🎂🎂🎂
+      date: 2023/11/14
+      image: 
+        - https://image.chyt.top/essay/20231115231516.jpg
+        - https://image.chyt.top/essay/20231115231456.jpg
+
+    - content: 捕获了一只可爱的小熊 (✪ω✪)
+      date: 2023/11/15
+      image: 
+        - https://image.chyt.top/essay/DCCD3184AEEE7C40E6359CAC64D528AC.jpg
+
+    - content: 12.13 铭记历史，勿忘国耻！
+      date: 2023/12/13
+
+    - content: 天呐，为什么考研英语这么难！
+      date: 2024/9/10
+
+    - content: 10.1 祝贺祖国妈妈75周年快乐！
+      date: 2024/10/1
+    
+    # - content: 
+    #   date: 
+    #   from:
+    #   video:
+    #     - 
+    #   image:
+    #     -
+    #   link:

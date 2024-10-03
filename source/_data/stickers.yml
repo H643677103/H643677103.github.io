@@ -1,0 +1,12 @@
+- title: DIY贴纸
+  subTitle: 小贴纸
+  tips: 满足你的赛博收集癖
+  buttonText: 关于我
+  buttonLink: /about/
+  top_background: https://image.chyt.top/20231105004057.jpg
+  stickers_list:
+    - name: 麦当劳
+      label: 敬请期待
+      specification: Mcdonald
+      image: https://image.chyt.top/mcdonald.svg
+      link: /mcdonald/

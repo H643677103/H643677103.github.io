@@ -1,0 +1,59 @@
+.airLabel
+  span 目前小空调仍存在问题，还在测试中，敬请谅解~
+
+
+.air-conditioner
+  .air-conditioner-main-top
+    .air-conditioner-main-top-tit 便携式小空调
+    .air-conditioner-tip
+      .air-conditioner-tip-icon
+      span.air-conditioner-tip-content Tip: 为你的夏日带去
+      span.air-conditioner-tip-highlight 清凉!
+  .air-container
+    .air
+      img.picture(src="https://bu.dusays.com/2023/11/03/6543d9e855f12.png" alt="x")
+      img.pattern(src="" alt="x")
+      img.air_speed(src="" alt="x")
+      span.font
+      span.air-logo ☁
+      span.dot
+    .feng
+    .wind
+      .speed_low
+        span.winds.wind1
+        span.winds.wind2
+        span.winds.wind3
+        span.speed_mid
+          span.winds.wind4
+          span.winds.wind5
+          span.speed_hig
+            span.winds.wind6
+            span.winds.wind7
+    .remote
+      .open_box
+        #power-button(onclick="togglePower()")
+          .open_icon
+        span CHYT.小空调
+      .switch_center
+        .circle-ring
+        #circle-ring_2
+        .remote_font
+          #temp-down-button(onclick="decreaseTemp()")
+            .remote_down_icon
+          div
+            span#temperatureNum - -
+            span.limit &nbsp;°
+          #temp-up-button(onclick="increaseTemp()")
+            .remote_up_icon
+        #remote_pattern - -
+        #speed_box 风速 低
+      .mod_box
+        #mod_button(onclick="changeMode()")
+          .mod_button_icon
+        #fan-speed-button(onclick="changeFanSpeed()")
+          .fan_speed-button_icon
+  audio.music(src="/img/airConditioner/ac-work.m4a" loop)
+  audio.ding(src="/img/airConditioner/12763.wav")
+
+.js-pjax
+  script(type="text/javascript" src="/js/airConditioner/airConditioner.min.js")

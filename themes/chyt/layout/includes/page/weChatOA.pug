@@ -1,0 +1,22 @@
+#weChatOA-page
+    .wechat
+        .wechat-card
+            .qrcode
+            .tips 扫描二维码关注公众号
+            .wechatOA-card
+                .wechatOA-head
+                .wechatOA-info
+                    .wechatOA-name#wechatOA-name CHYT
+                    .wechatOA-description 分享设计与科技生活
+    .footer 
+        a.footer-item(href="https://kf.qq.com/touch/wxappfaq/1208117b2mai141113jaqAnU.html?platform=14" title="帮助" target="_blank") 如何扫码
+        a.footer-item(href="https://beian.miit.gov.cn/#/Integrated/index" title="备案信息" target="_blank") 鄂ICP备2023022690号-2
+    </div>
+
+    script.
+        function setVH() {
+            let vh = window.innerHeight;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        setVH();
+        window.addEventListener('resize', setVH);

@@ -1,0 +1,32 @@
+#stickers
+  if site.data.stickers
+    each i in site.data.stickers
+      .author-content.author-content-item.stickersPage.single(style = i.top_background ? `background: url(${i.top_background}) left 28% / cover no-repeat;` : "")
+        .card-content
+          .author-content-item-tips=i.title
+          span.author-content-item-title=i.subTitle
+          .content-bottom
+            .tips=i.tips
+          .banner-button-group
+            a.banner-button(href=i.buttonLink)
+              i.chytfont.chyt-icon-arrow-circle-right(style='font-size: 1.3rem; color: #000;')
+              span.banner-button-text(style='color: #000;')=i.buttonText
+      .stickers-item
+        .stickers-item-content
+          each iten, indey in i.stickers_list
+            .stickers-item-content-item
+              .stickers-item-content-item-label= iten.label
+              .stickers-item-content-item-cover
+                img.stickers-item-content-item-image(data-lazy-src=url_for(iten.image) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt=iten.name)
+              .stickers-item-content-item-info
+                .stickers-item-content-item-name(title=iten.name)= iten.name
+                .stickers-item-content-item-specification= iten.specification
+                .stickers-item-content-item-toolbar
+                  if iten.label.includes('敬请期待')
+                    a.stickers-item-content-item-link(href= "javascript:0;" style = `pointer-events:none;`) 敬请期待
+                    .bber-reply(onclick="rm.rightMenuCommentText(" + `'${iten.name + " " + iten.specification}'` + ")")
+                      i.chytfont.chyt-icon-message
+                  else
+                    a.stickers-item-content-item-link(href= iten.link, target='_blank') 前往DIY
+                    .bber-reply(onclick="rm.rightMenuCommentText(" + `'${iten.name + " " + iten.specification}'` + ")")
+                      i.chytfont.chyt-icon-message
