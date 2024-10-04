@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.chyt.top/mcdonald/index.html</loc>
+    
+    <lastmod>2024-10-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.chyt.top/music/index.html</loc>
+    
+    <lastmod>2024-10-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.chyt.top/privacy/index.html</loc>
     
     <lastmod>2024-10-04</lastmod>
@@ -65,87 +83,6 @@
   </url>
   
   <url>
-    <loc>https://blog.chyt.top/music/index.html</loc>
-    
-    <lastmod>2024-10-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.chyt.top/mcdonald/index.html</loc>
-    
-    <lastmod>2024-10-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.chyt.top/equipment/index.html</loc>
-    
-    <lastmod>2024-10-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.chyt.top/essay/index.html</loc>
-    
-    <lastmod>2024-10-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.chyt.top/fcircle/index.html</loc>
-    
-    <lastmod>2024-10-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.chyt.top/posts/ef3414ee.html</loc>
-    
-    <lastmod>2024-10-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.chyt.top/about/index.html</loc>
-    
-    <lastmod>2024-10-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.chyt.top/air-conditioner/index.html</loc>
-    
-    <lastmod>2024-10-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.chyt.top/album/index.html</loc>
-    
-    <lastmod>2024-10-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.chyt.top/categories/index.html</loc>
     
     <lastmod>2024-10-04</lastmod>
@@ -173,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://blog.chyt.top/album_details/belovedPhoto/index.html</loc>
+    <loc>https://blog.chyt.top/equipment/index.html</loc>
     
     <lastmod>2024-10-04</lastmod>
     
@@ -182,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://blog.chyt.top/album_details/dailyPhoto/index.html</loc>
+    <loc>https://blog.chyt.top/essay/index.html</loc>
     
     <lastmod>2024-10-04</lastmod>
     
@@ -191,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://blog.chyt.top/album_details/wordScenery/index.html</loc>
+    <loc>https://blog.chyt.top/fcircle/index.html</loc>
     
     <lastmod>2024-10-04</lastmod>
     
@@ -237,6 +174,69 @@
   
   <url>
     <loc>https://blog.chyt.top/posts/70e6f39c.html</loc>
+    
+    <lastmod>2024-10-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.chyt.top/posts/ef3414ee.html</loc>
+    
+    <lastmod>2024-10-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.chyt.top/about/index.html</loc>
+    
+    <lastmod>2024-10-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.chyt.top/air-conditioner/index.html</loc>
+    
+    <lastmod>2024-10-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.chyt.top/album/index.html</loc>
+    
+    <lastmod>2024-10-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.chyt.top/album_details/belovedPhoto/index.html</loc>
+    
+    <lastmod>2024-10-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.chyt.top/album_details/dailyPhoto/index.html</loc>
+    
+    <lastmod>2024-10-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.chyt.top/album_details/wordScenery/index.html</loc>
     
     <lastmod>2024-10-04</lastmod>
     
