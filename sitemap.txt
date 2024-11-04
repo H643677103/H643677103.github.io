@@ -7,10 +7,6 @@ https://blog.chyt.top/privacy/index.html
 https://blog.chyt.top/stickers/index.html
 https://blog.chyt.top/tags/index.html
 https://blog.chyt.top/weChatOA/index.html
-https://blog.chyt.top/copyright/index.html
-https://blog.chyt.top/equipment/index.html
-https://blog.chyt.top/essay/index.html
-https://blog.chyt.top/fcircle/index.html
 https://blog.chyt.top/posts/f96a143d.html
 https://blog.chyt.top/posts/62bbbb78.html
 https://blog.chyt.top/posts/d50a.html
@@ -22,6 +18,10 @@ https://blog.chyt.top/air-conditioner/index.html
 https://blog.chyt.top/album/index.html
 https://blog.chyt.top/categories/index.html
 https://blog.chyt.top/cookies/index.html
+https://blog.chyt.top/copyright/index.html
+https://blog.chyt.top/equipment/index.html
+https://blog.chyt.top/essay/index.html
+https://blog.chyt.top/fcircle/index.html
 https://blog.chyt.top/album_details/belovedPhoto/index.html
 https://blog.chyt.top/album_details/dailyPhoto/index.html
 https://blog.chyt.top/album_details/wordScenery/index.html
