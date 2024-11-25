@@ -1,3 +1,4 @@
+https://blog.chyt.top/weChatOA/index.html
 https://blog.chyt.top/manifest.json
 https://blog.chyt.top/json/music.json
 https://blog.chyt.top/link/index.html
@@ -6,7 +7,6 @@ https://blog.chyt.top/music/index.html
 https://blog.chyt.top/privacy/index.html
 https://blog.chyt.top/stickers/index.html
 https://blog.chyt.top/tags/index.html
-https://blog.chyt.top/weChatOA/index.html
 https://blog.chyt.top/posts/f96a143d.html
 https://blog.chyt.top/posts/62bbbb78.html
 https://blog.chyt.top/posts/d50a.html
