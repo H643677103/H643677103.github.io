@@ -5,7 +5,7 @@
   font-style: normal;   /* 字体样式 */
 }
 
-#welcome-info {
+/* #welcome-info {
   overflow: hidden;
   --icat-card-welcome: #49b1f5;
 }
@@ -28,4 +28,4 @@
   align-items: center;
   padding: 6px 10px;
   margin: 6px 0;
-}
+} */
